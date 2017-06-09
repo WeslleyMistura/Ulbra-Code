@@ -20,21 +20,25 @@ class Estado
             {
                 Console.Clear();
                 Console.WriteLine("Você marcou 1 dia no valor de R$80,00 sem desconto!");
+                break;
             }
             if(hora == 2)
             {
                 Console.Clear();
                 Console.WriteLine("Você marcou 2 dias no valor de R$72,00 com 10% de desconto!");
+                break;
             }
             if(hora == 3)
             {
                 Console.Clear();
                 Console.WriteLine("Você marcou 3 dias no valor de R$68,00 com 15% de desconto!");
+                break;
             }
             if(hora == 4)
             {
                 Console.Clear();
                 Console.WriteLine("Você marcou 4 dias no valor de R$64,00 com 20% de desconto!");
+                break;
             }
             if((hora != 1)&&(hora != 2)&&(hora != 3)&&(hora != 4))
             {

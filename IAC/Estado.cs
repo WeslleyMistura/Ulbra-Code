@@ -4,33 +4,42 @@ class Estado
 {
     public static void Main()
     {
-        char cod;
-
-        Console.WriteLine("Digite a letra para seu estado:");
-        Console.WriteLine("Digite (r) para Rio Grande do Sul:");
-        Console.WriteLine("Digite (s) para Santa Catarina:");
-        Console.WriteLine("Digite (p) para Paraná:");
-        cod = char.Parse(Console.ReadLine());
+        int cod=0;
 
         do
         {
-            if(cod == 'r')
+            if(!(cod==1)||(cod==2)||(cod==3)){
+            Console.WriteLine("Digite o número para seu estado:");
+            Console.WriteLine("Digite (1) para Rio Grande do Sul:");
+            Console.WriteLine("Digite (2) para Santa Catarina:");
+            Console.WriteLine("Digite (3) para Paraná:");
+            cod = int.Parse(Console.ReadLine());
+            }
+            if(cod == 1)
             {
+                Console.Clear();
                 Console.WriteLine("Gaúcho!");
-            }
-            if(cod == 's')
+                break;
+            }  
+            if(cod == 2)
             {
+                Console.Clear();
                 Console.WriteLine("Catarinense!");
-            }
-            if(cod == 'p')
+                break;
+            }  
+            if(cod == 3)
             {
+                Console.Clear();
                 Console.WriteLine("Paranaense!");
+                break;
             }
-            if((cod != 'r')&&(cod != 's')&&(cod != 'p'));
+            if((cod != 1)&(cod != 2)&(cod != 3)) 
             {
+                Console.Clear();
                 Console.WriteLine("Estado não identificado!");
             }
-        }while((cod == 'r')||(cod == 's')||(cod == 'p'));
+            
+        }while((cod != 1)||(cod != 2)||(cod != 3));
         Console.ReadLine();
     }
 }

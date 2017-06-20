@@ -1,6 +1,6 @@
 using System;
 
-class Opcoes
+class Codes
 {
     public static void Main()
     {

@@ -1,11 +1,11 @@
 using System;
-
+ 
 class Codes
 {
     public static void Main()
     {
         int Opcao = 0;
-
+ 
         do
         {
             Console.Clear();
@@ -16,17 +16,17 @@ class Codes
             Console.WriteLine("[4] IMC");
             Console.WriteLine("[5] SAIR");
             Opcao = int.Parse(Console.ReadLine());
-            
-
+             
+ 
             switch (Opcao)        
             {
-                  case 1:  
-
+                case 1:  
+ 
                         float N1 = 0;
                         float N2 = 0;
                         float Result = 0;
                         string Oper = "";
-
+ 
                         Console.Clear();
                         Console.WriteLine("Selecione a opcão:");
                         Console.WriteLine("[+] Soma:");
@@ -34,54 +34,54 @@ class Codes
                         Console.WriteLine("[*] Multiplicação:");
                         Console.WriteLine("[/] Divisão:");
                         Oper = Console.ReadLine();
-
+ 
                         Console.WriteLine("Digite um número:");
                         N1 = float.Parse(Console.ReadLine());
-
+ 
                         Console.WriteLine("Digite mais um número:");
                         N2 = float.Parse(Console.ReadLine());
-
+ 
                         if(Oper == "+")
                         {
-                              Result = N1 + N2;
+                            Result = N1 + N2;
                         }
                         else if(Oper == "-")
                         {
-                              Result = N1 - N2;
+                            Result = N1 - N2;
                         }
                         else if(Oper == "*")
                         {
-                              Result = N1 * N2;                
+                            Result = N1 * N2;                
                         }
                         else if(Oper == "/")
                         {
-                              Result = N1 / N2;
+                            Result = N1 / N2;
                         }
                         else
                         {
-                              Console.WriteLine("Erro com operrador!");
+                            Console.WriteLine("Erro com operrador!");
                         }
-                              Console.WriteLine("O resultado é: " + N1 + Oper + N2 +" = " + Result);
-                              Console.WriteLine("Press Enter to go back!");
-                              Console.ReadLine();
-                              break;
-
-                  case 2:
+                            Console.WriteLine("O resultado é: " + N1 + Oper + N2 +" = " + Result);
+                            Console.WriteLine("Press Enter to go back!");
+                            Console.ReadLine();
+                            break;
+ 
+                case 2:
                         float G1 = 0;
                         float G2 = 0;
                         float Media = 0;
-                        
-
-                    
+                         
+ 
+                     
                         Console.Clear();
                         Console.WriteLine("Digite sua nota da [G1]: ");
                         G1 = float.Parse(Console.ReadLine());
-                            
+                             
                         Console.WriteLine("Digite sua nota da [G2]: ");
                         G2 = float.Parse(Console.ReadLine());
-
+ 
                         Media = (G1 + (G2 * 2))/3;
-
+ 
                         Console.WriteLine("MEDIA FINAL: {0:0.00}", Media);
                         if(Media >= 6)
                         {
@@ -94,44 +94,44 @@ class Codes
                         Console.WriteLine("Press Enter to go back!");
                         Console.ReadLine();
                         break;
-
-                  case 3:
-            
+ 
+                case 3:
+             
                         int N3 = 0;
                         int result = 0;
-
+ 
                         Console.Clear();
                         Console.WriteLine("Digite o número para a tabuada: ");
                         N3 = int.Parse(Console.ReadLine());
-
+ 
                         for (int i = 0; i <= 10; i++)
                         {
-                              result = N3 * i;
-                              Console.WriteLine(N3 + " * " + i + " = " + result);
+                            result = N3 * i;
+                            Console.WriteLine(N3 + " * " + i + " = " + result);
                         } 
                         Console.WriteLine("Press Enter to go back!"); 
                         Console.ReadLine();
                         break;
-            
-                  case 4:
-            
+             
+                case 4:
+             
                         float peso = 0;
                         float altura = 0;
                         float Imc = 0;
                         string Sexo = "";
-
+ 
                         Console.Clear();
                         Console.WriteLine("Digite seu sexo: [M] ou [F]");
                         Sexo = Console.ReadLine();
-
+ 
                         Console.WriteLine("Qual seu peso em kg? ");
                         peso = float.Parse(Console.ReadLine());
-
+ 
                         Console.WriteLine("Qual sua altura em metros? ");
                         altura = float.Parse(Console.ReadLine());
-
+ 
                         Imc = peso/(altura*altura);
-
+ 
                         if(Sexo == "m" || Sexo == "M")
                         {
                             if(Imc < 20.7){
@@ -162,7 +162,15 @@ class Codes
                         Console.WriteLine("Press Enter to go back!");
                         Console.ReadLine();
                         break;
-
+                case 5:
+                        Console.WriteLine("SAIU!");
+                        break;
+                default: 
+                        Console.WriteLine("Digito inválido!");
+                        Console.WriteLine("Press Enter to go back!");
+                        Console.ReadLine();
+                        break;    
+ 
             }
         } while (Opcao != 5);
     }     

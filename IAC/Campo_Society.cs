@@ -1,6 +1,6 @@
 using System;
 
-class Estado
+class Campo_Society
 {
     public static void Main()
     {
